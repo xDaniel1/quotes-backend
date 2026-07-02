@@ -14,3 +14,6 @@
 // Every other file that needs the database imports from here.
 // Never create a second Sequelize connection in another file.
 // ============================================================
+const { Sequelize } = require("sequelize");
+const dbConnection = new Sequelize("postgres://localhost:5432/quotes");
+module.exports = dbConnection;
